@@ -1,0 +1,76 @@
+baseURL = 'https://www.nikolalukovic.com'
+defaultContentLanguage = "en"
+title = "Blog'n'stuff"
+theme = "gokarna"
+
+enableRobotsTXT = true
+pygmentsStyle = "monokai"
+
+[params]
+footer = "Nikola Luković"
+description = "Code · Programming · Architecture"
+avatarURL = "https://avatars.githubusercontent.com/u/6897673?v=4"
+avatarSize = "size-m"
+customHeadHTML = ""
+showPostsOnHomePage = "recent"
+metaKeywords = [
+    "blog",
+    "software",
+    "nlukovic",
+    "nikolalukovic",
+    "programming",
+    "react",
+    "js",
+    "javascript",
+    "css",
+    "html",
+    "go",
+    "golang",
+    ".net",
+    "dotnet",
+    "dotnetcore",
+    "aspnetcore",
+    "itekako",
+]
+
+[menu]
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+identifier = "posts"
+url = "/posts/"
+name = "Posts"
+weight = 1
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 2
+
+[[menu.main]]
+identifier = "github"
+url = "https://github.com/nikolalukovic"
+weight = 3
+pre = "<span data-feather='github'></span>"
+
+[[menu.main]]
+identifier = "linkedin"
+url = "https://www.linkedin.com/in/nikola-lukovic-89a17595"
+weight = 3
+pre = "<span data-feather='linkedin'></span>"
+
+[[menu.main]]
+identifier = "twitter"
+pre = "<span data-feather='twitter'></span>"
+url = "https://twitter.com/lichtnik"
+weight = 6
+
+[[menu.main]]
+identifier = "bandcamp"
+pre = "<span data-feather='music'></span>"
+url = "https://bandcamp.com/nikolalukovic"
+weight = 6
