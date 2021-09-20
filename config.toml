@@ -1,6 +1,6 @@
 baseURL = 'https://www.nikolalukovic.com'
 defaultContentLanguage = "en"
-title = "Blog'n'stuff"
+title = "A Blog"
 theme = "gokarna"
 
 enableRobotsTXT = true
@@ -8,7 +8,7 @@ pygmentsStyle = "monokai"
 
 [params]
 footer = "Nikola Luković"
-description = "Code · Programming · Architecture"
+description = "Code · Architecture · Design"
 avatarURL = "https://avatars.githubusercontent.com/u/6897673?v=4"
 avatarSize = "size-m"
 customHeadHTML = ""
@@ -31,6 +31,11 @@ metaKeywords = [
     "dotnetcore",
     "aspnetcore",
     "itekako",
+    "nikola",
+    "lukovic",
+    "nikola lukovic",
+    "nikola.lukovic",
+    "nikola.lukovic@live.com"
 ]
 
 [menu]
