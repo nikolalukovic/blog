@@ -11,7 +11,9 @@ footer = "Nikola Luković"
 description = "Code · Architecture · Design"
 avatarURL = "https://avatars.githubusercontent.com/u/6897673?v=4"
 avatarSize = "size-m"
-customHeadHTML = ""
+customHeadHTML = '''
+    <script defer data-domain="nikolalukovic.com" src="https://plausible.io/js/plausible.js"></script>
+'''
 showPostsOnHomePage = "recent"
 metaKeywords = [
     "blog",
