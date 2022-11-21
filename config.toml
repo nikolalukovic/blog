@@ -35,7 +35,9 @@ metaKeywords = [
     "itekako",
     "nikola",
     "lukovic",
+    "luković",
     "nikola lukovic",
+    "nikola luković",
     "nikola.lukovic",
     "nikola.lukovic@live.com"
 ]
@@ -50,34 +52,40 @@ weight = 1
 identifier = "posts"
 url = "/posts/"
 name = "Posts"
-weight = 1
+weight = 2
 
 [[menu.main]]
 identifier = "tags"
 name = "Tags"
 url = "/tags/"
-weight = 2
+weight = 3
 
 [[menu.main]]
 identifier = "github"
 url = "https://github.com/nikolalukovic"
-weight = 3
+weight = 4
 pre = "<span data-feather='github'></span>"
 
 [[menu.main]]
 identifier = "linkedin"
 url = "https://www.linkedin.com/in/nikola-lukovic-89a17595"
-weight = 3
+weight = 5
 pre = "<span data-feather='linkedin'></span>"
+
+[[menu.main]]
+identifier = "mastodon"
+pre = "<span data-feather='external-link'></span>"
+url = "https://hachyderm.io/@nikola"
+weight = 6
 
 [[menu.main]]
 identifier = "twitter"
 pre = "<span data-feather='twitter'></span>"
 url = "https://twitter.com/lichtnik"
-weight = 6
+weight = 7
 
 [[menu.main]]
 identifier = "bandcamp"
 pre = "<span data-feather='music'></span>"
 url = "https://bandcamp.com/nikolalukovic"
-weight = 6
+weight = 8
