@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Datacontext</title>
+    <meta name="description" content="Code · Architecture · Design">
+    <meta name="keywords" content='blog, software, nlukovic, nikolalukovic, programming, react, js, javascript, css, html, go, golang, .net, dotnet, dotnetcore, aspnetcore, itekako, nikola, lukovic, luković, nikola lukovic, nikola luković, nikola.lukovic, nikola.lukovic@live.com'>
+
+    <meta property="og:url" content="http://localhost:1313/tags/datacontext/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Datacontext">
+    <meta property="og:description" content="Code · Architecture · Design">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/6897673?v=4">
+    <meta property="og:image:secure_url" content="https://avatars.githubusercontent.com/u/6897673?v=4">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Datacontext">
+    <meta name="twitter:description" content="Code · Architecture · Design">
+    <meta property="twitter:domain" content="http://localhost:1313/tags/datacontext/">
+    <meta property="twitter:url" content="http://localhost:1313/tags/datacontext/">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/6897673?v=4">
+
+    
+    <link rel="canonical" href="http://localhost:1313/tags/datacontext/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.315e3e4471e2465f34b6c92d59edceac6f6b3d3844df51bbaac4e5f7227b04e4.js" integrity="sha256-MV4&#43;RHHiRl80tsktWe3OrG9rPThE31G7qsTl9yJ7BOQ="></script>
+
+    
+    
+        <script defer data-domain="nikolalukovic.com" src="https://plausible.io/js/plausible.js"></script>
+
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/">
+                <img src='https://avatars.githubusercontent.com/u/6897673?v=4' alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/">A Blog</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/"> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/posts/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/tags/"> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/nikolalukovic"><span data-feather='github'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://www.linkedin.com/in/nikola-lukovic-89a17595"><span data-feather='linkedin'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://hachyderm.io/@nikola"><span data-feather='external-link'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://twitter.com/Kooraiber"><span data-feather='twitter'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://bandcamp.com/nikolalukovic"><span data-feather='music'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/"> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/posts/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/tags/"> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/nikolalukovic"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://www.linkedin.com/in/nikola-lukovic-89a17595"><span data-feather='linkedin'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://hachyderm.io/@nikola"><span data-feather='external-link'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://twitter.com/Kooraiber"><span data-feather='twitter'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://bandcamp.com/nikolalukovic"><span data-feather='music'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="container list-posts">
+
+    <h1 class="list-title">datacontext</h1>
+
+    
+
+    <h2 class="posts-year">2017</h2><article class="post-title">
+    <a href="http://localhost:1313/posts/wpf-custom-usercontrol-datacontext-binding-gotcha/" class="post-link">WPF Custom UserControl Datacontext Binding Gotcha</a>
+    <div class="flex-break"></div>
+    <span class="post-date">March 15, 2017</span>
+</article>
+
+    
+
+</div>
+
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 Nikola Luković</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

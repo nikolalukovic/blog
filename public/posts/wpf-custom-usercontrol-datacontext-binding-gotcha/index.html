@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>WPF Custom UserControl Datacontext Binding Gotcha</title>
+    <meta name="description" content="Code · Architecture · Design">
+    <meta name="keywords" content='blog, software, nlukovic, nikolalukovic, programming, react, js, javascript, css, html, go, golang, .net, dotnet, dotnetcore, aspnetcore, itekako, nikola, lukovic, luković, nikola lukovic, nikola luković, nikola.lukovic, nikola.lukovic@live.com, wpf, datacontext, binding'>
+
+    <meta property="og:url" content="http://localhost:1313/posts/wpf-custom-usercontrol-datacontext-binding-gotcha/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="WPF Custom UserControl Datacontext Binding Gotcha">
+    <meta property="og:description" content="Code · Architecture · Design">
+    <meta property="og:image" content="http://localhost:1313/images/wpf-xaml.png">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/wpf-xaml.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WPF Custom UserControl Datacontext Binding Gotcha">
+    <meta name="twitter:description" content="Code · Architecture · Design">
+    <meta property="twitter:domain" content="http://localhost:1313/posts/wpf-custom-usercontrol-datacontext-binding-gotcha/">
+    <meta property="twitter:url" content="http://localhost:1313/posts/wpf-custom-usercontrol-datacontext-binding-gotcha/">
+    <meta name="twitter:image" content="http://localhost:1313/images/wpf-xaml.png">
+
+    
+    <link rel="canonical" href="http://localhost:1313/posts/wpf-custom-usercontrol-datacontext-binding-gotcha/" />
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.315e3e4471e2465f34b6c92d59edceac6f6b3d3844df51bbaac4e5f7227b04e4.js" integrity="sha256-MV4&#43;RHHiRl80tsktWe3OrG9rPThE31G7qsTl9yJ7BOQ="></script>
+
+    
+    
+        <script defer data-domain="nikolalukovic.com" src="https://plausible.io/js/plausible.js"></script>
+
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/">
+                <img src='https://avatars.githubusercontent.com/u/6897673?v=4' alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/">A Blog</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/"> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/posts/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/tags/"> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/nikolalukovic"><span data-feather='github'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://www.linkedin.com/in/nikola-lukovic-89a17595"><span data-feather='linkedin'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://hachyderm.io/@nikola"><span data-feather='external-link'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://twitter.com/Kooraiber"><span data-feather='twitter'></span>  </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://bandcamp.com/nikolalukovic"><span data-feather='music'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span id="dark-theme-toggle-screen-reader-target" class="sr-only"></span>
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span id="hamburger-menu-toggle-screen-reader-target" class="sr-only">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/"> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/posts/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/tags/"> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/nikolalukovic"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://www.linkedin.com/in/nikola-lukovic-89a17595"><span data-feather='linkedin'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://hachyderm.io/@nikola"><span data-feather='external-link'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://twitter.com/Kooraiber"><span data-feather='twitter'></span>  </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://bandcamp.com/nikolalukovic"><span data-feather='music'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span id="dark-theme-toggle-screen-reader-target" class="sr-only">theme</span>
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>WPF Custom UserControl Datacontext Binding Gotcha</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">March 15, 2017
+        
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="http://localhost:1313/tags/wpf">wpf</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/tags/datacontext">datacontext</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/tags/binding">binding</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/tags/.net">.net</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/tags/programming">programming</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>Creating custom user controls in WPF and as well as fully supporting MVVM with binding is a pretty <em>straightforward</em> process, but there are a couple of things that, at a first glance, look like they should work but they&rsquo;re not. At least for me. One of those things is when you <em>bind</em> <code>DataContext</code> to code behind, or to <code>Self</code>.</p>
+<h2 id="a-simple-custom-user-control">A simple custom user control</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;UserControl</span> <span style="color:#a6e22e">x:Class=</span><span style="color:#e6db74">&#34;SomeWpfApp.CustomUserControl&#34;</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://schemas.microsoft.com/winfx/2006/xaml/presentation&#34;</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">xmlns:x=</span><span style="color:#e6db74">&#34;http://schemas.microsoft.com/winfx/2006/xaml&#34;</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">xmlns:mc=</span><span style="color:#e6db74">&#34;http://schemas.openxmlformats.org/markup-compatibility/2006&#34;</span> 
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">xmlns:d=</span><span style="color:#e6db74">&#34;http://schemas.microsoft.com/expression/blend/2008&#34;</span> 
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">xmlns:local=</span><span style="color:#e6db74">&#34;clr-namespace:SomeWpfApp&#34;</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">DataContext=</span><span style="color:#e6db74">&#34;{Binding RelativeSource={RelativeSource Self}}&#34;</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">d:DataContext=</span><span style="color:#e6db74">&#34;{d:DesignInstance Type=local:CustomUserControl, IsDesignTimeCreatable=True}&#34;</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">mc:Ignorable=</span><span style="color:#e6db74">&#34;d&#34;</span> 
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">d:DesignHeight=</span><span style="color:#e6db74">&#34;300&#34;</span> <span style="color:#a6e22e">d:DesignWidth=</span><span style="color:#e6db74">&#34;300&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;Grid&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;TextBlock</span> <span style="color:#a6e22e">Text=</span><span style="color:#e6db74">&#34;{Binding CustomText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/Grid&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/UserControl&gt;</span>
+</span></span></code></pre></div><p>Here, we specify a custom user control with a <code>TextBlock</code> that binds to a custom dependency property in code behind called <code>CustomText</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">readonly</span> DependencyProperty CustomTextProperty =
+</span></span><span style="display:flex;"><span>    DependencyProperty.Register(nameof(CustomText),
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">typeof</span>(<span style="color:#66d9ef">string</span>),
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">typeof</span>(CustomUserControl),
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">new</span> FrameworkPropertyMetadata(<span style="color:#e6db74">&#34;&#34;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> CustomText
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">get</span> =&gt; (<span style="color:#66d9ef">string</span>)GetValue(CustomTextProperty);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">set</span> =&gt; SetValue(CustomTextProperty, <span style="color:#66d9ef">value</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="a-problem-and-a-solution">A problem and a solution</h2>
+<p>The problem with code above is that the <code>DataContext</code> binding chain is now <em>broken</em>.<br>
+In WPF, if not specified otherwise, <code>DataContext</code> is passed from <a href="https://msdn.microsoft.com/en-us/library/system.windows.frameworkelement.parent(v=vs.110).aspx">Parent</a> to it&rsquo;s children. But by binding <code>DataContext</code> to <em>Self</em> we&rsquo;ve broken that chain of inheritance.</p>
+<p>Which means that if you try to use this custom control somewhere else and you <em>bind</em> to <code>CustomText</code> property:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;CustomUserControl</span> <span style="color:#a6e22e">CustomText=</span><span style="color:#e6db74">&#34;{Binding SomeOtherProperty}&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span></code></pre></div><p><code>CustomUserControl</code> will expect that <code>SomeOtherProperty</code> is actually in its code behind. The solution for this problem is to move <code>DataContext</code> binding from parent to first child, like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;UserControl</span> <span style="color:#a6e22e">x:Class=</span><span style="color:#e6db74">&#34;SomeWpfApp.CustomUserControl&#34;</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://schemas.microsoft.com/winfx/2006/xaml/presentation&#34;</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">xmlns:x=</span><span style="color:#e6db74">&#34;http://schemas.microsoft.com/winfx/2006/xaml&#34;</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">xmlns:mc=</span><span style="color:#e6db74">&#34;http://schemas.openxmlformats.org/markup-compatibility/2006&#34;</span> 
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">xmlns:d=</span><span style="color:#e6db74">&#34;http://schemas.microsoft.com/expression/blend/2008&#34;</span> 
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">xmlns:local=</span><span style="color:#e6db74">&#34;clr-namespace:SomeWpfApp&#34;</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">mc:Ignorable=</span><span style="color:#e6db74">&#34;d&#34;</span> 
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">d:DesignHeight=</span><span style="color:#e6db74">&#34;300&#34;</span> <span style="color:#a6e22e">d:DesignWidth=</span><span style="color:#e6db74">&#34;300&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;Grid</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">DataContext=</span><span style="color:#e6db74">&#34;{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:CustomUserControl}}&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">d:DataContext=</span><span style="color:#e6db74">&#34;{d:DesignInstance Type=local:AbbeooLogonUserControl, IsDesignTimeCreatable=True}&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;TextBlock</span> <span style="color:#a6e22e">Text=</span><span style="color:#e6db74">&#34;{Binding CustomText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/Grid&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/UserControl&gt;</span>
+</span></span></code></pre></div><h2 id="different-problem-and-a-not-so-good-solution">Different problem and a not so good solution</h2>
+<p>90% of the time above specified solution will suffice, but there are times where you need to bind <code>DataContext</code> to parent. One of those times is when you have some custom properties that are directly manipulating some aspect of a parent element.<br>
+Currently the only solution i found is to specifically point to a place from which to find a bound property. So something like this won&rsquo;t work:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;CustomUserControl</span> <span style="color:#a6e22e">CustomText=</span><span style="color:#e6db74">&#34;{Binding SomeOtherProperty}&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span></code></pre></div><p>but if you, lets say, bind a <code>DataContext</code> to code behind in a control where you implement your custom control, you can do something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;CustomUserControl</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">CustomText=</span><span style="color:#e6db74">&#34;{Binding SomeOtherProperty, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=RootControl}}&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span></code></pre></div><p>Sometimes you need to do it like this if your <code>DataContext</code> is in another class:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;CustomUserControl</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">CustomText=</span><span style="color:#e6db74">&#34;{Binding DataContext.SomeOtherProperty, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=RootControl}}&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span></code></pre></div><h3 id="summing-up">Summing up</h3>
+<p>I hope this helped, if you have any questions feel free to contact me!</p>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 Nikola Luković</span>
+    
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

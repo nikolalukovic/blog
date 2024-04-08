@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on A Blog</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on A Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agile</title>
+      <link>http://localhost:1313/tags/agile/</link>
+      <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/agile/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>http://localhost:1313/tags/programming/</link>
+      <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>.Net</title>
+      <link>http://localhost:1313/tags/.net/</link>
+      <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/.net/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Assembly</title>
+      <link>http://localhost:1313/tags/assembly/</link>
+      <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/assembly/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dlr</title>
+      <link>http://localhost:1313/tags/dlr/</link>
+      <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/dlr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dynamic</title>
+      <link>http://localhost:1313/tags/dynamic/</link>
+      <pubDate>Thu, 23 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/dynamic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Binding</title>
+      <link>http://localhost:1313/tags/binding/</link>
+      <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/binding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Datacontext</title>
+      <link>http://localhost:1313/tags/datacontext/</link>
+      <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/datacontext/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wpf</title>
+      <link>http://localhost:1313/tags/wpf/</link>
+      <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/wpf/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

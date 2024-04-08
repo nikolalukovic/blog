@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Binding on A Blog</title>
+    <link>http://localhost:1313/tags/binding/</link>
+    <description>Recent content in Binding on A Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 15 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/binding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WPF Custom UserControl Datacontext Binding Gotcha</title>
+      <link>http://localhost:1313/posts/wpf-custom-usercontrol-datacontext-binding-gotcha/</link>
+      <pubDate>Wed, 15 Mar 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/wpf-custom-usercontrol-datacontext-binding-gotcha/</guid>
+      <description>Creating custom user controls in WPF and as well as fully supporting MVVM with binding is a pretty straightforward process, but there are a couple of things that, at a first glance, look like they should work but they&amp;rsquo;re not. At least for me. One of those things is when you bind DataContext to code behind, or to Self.&#xA;A simple custom user control &amp;lt;UserControl x:Class=&amp;#34;SomeWpfApp.CustomUserControl&amp;#34; xmlns=&amp;#34;http://schemas.microsoft.com/winfx/2006/xaml/presentation&amp;#34; xmlns:x=&amp;#34;http://schemas.microsoft.com/winfx/2006/xaml&amp;#34; xmlns:mc=&amp;#34;http://schemas.openxmlformats.org/markup-compatibility/2006&amp;#34; xmlns:d=&amp;#34;http://schemas.microsoft.com/expression/blend/2008&amp;#34; xmlns:local=&amp;#34;clr-namespace:SomeWpfApp&amp;#34; DataContext=&amp;#34;{Binding RelativeSource={RelativeSource Self}}&amp;#34; d:DataContext=&amp;#34;{d:DesignInstance Type=local:CustomUserControl, IsDesignTimeCreatable=True}&amp;#34; mc:Ignorable=&amp;#34;d&amp;#34; d:DesignHeight=&amp;#34;300&amp;#34; d:DesignWidth=&amp;#34;300&amp;#34;&amp;gt; &amp;lt;Grid&amp;gt; &amp;lt;TextBlock Text=&amp;#34;{Binding CustomText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}&amp;#34; /&amp;gt; &amp;lt;/Grid&amp;gt; &amp;lt;/UserControl&amp;gt; Here, we specify a custom user control with a TextBlock that binds to a custom dependency property in code behind called CustomText.</description>
+    </item>
+  </channel>
+</rss>

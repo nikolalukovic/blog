@@ -81,7 +81,7 @@ weight = 6
 [[menu.main]]
 identifier = "twitter"
 pre = "<span data-feather='twitter'></span>"
-url = "https://twitter.com/lichtnik"
+url = "https://twitter.com/Kooraiber"
 weight = 7
 
 [[menu.main]]

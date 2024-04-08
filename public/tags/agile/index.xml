@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Agile on A Blog</title>
+    <link>http://localhost:1313/tags/agile/</link>
+    <description>Recent content in Agile on A Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/agile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>You don&#39;t hate Agile</title>
+      <link>http://localhost:1313/posts/agile-you-dont-hate-agile/</link>
+      <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/agile-you-dont-hate-agile/</guid>
+      <description>Cheeky bait title aside, most probably what you actually hate isn&amp;rsquo;t even Agile but some waterfall/extreme programming Frankenstein&amp;rsquo;s monster stuck together with duct tape, sticks and misery which managers (controlling freaks) call Agile.&#xA;The premise of Agile is simple, it&amp;rsquo;s all about self-governing teams which self-organize in a way that best suits their needs to create a product while at the same time stay in contact with their client and users.</description>
+    </item>
+  </channel>
+</rss>
