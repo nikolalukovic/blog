@@ -43,49 +43,46 @@ metaKeywords = [
 ]
 
 [menu]
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
+    [[menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+        pre = "<span data-feather='home'></span>"
 
-[[menu.main]]
-identifier = "posts"
-url = "/posts/"
-name = "Posts"
-weight = 2
+    [[menu.main]]
+        identifier = "posts"
+        url = "/posts/"
+        name = "Posts"
+        weight = 2
+        pre = "<span data-feather='file-text'></span>"
 
-[[menu.main]]
-identifier = "tags"
-name = "Tags"
-url = "/tags/"
-weight = 3
+    [[menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags/"
+        weight = 3
+        pre = "<span data-feather='tag'></span>"
 
-[[menu.main]]
-identifier = "github"
-url = "https://github.com/nikolalukovic"
-weight = 4
-pre = "<span data-feather='github'></span>"
+    [[menu.main]]
+        identifier = "github"
+        url = "https://github.com/nikolalukovic"
+        weight = 4
+        pre = "<span data-feather='github'></span>"
 
-[[menu.main]]
-identifier = "linkedin"
-url = "https://www.linkedin.com/in/nikola-lukovic-89a17595"
-weight = 5
-pre = "<span data-feather='linkedin'></span>"
+    [[menu.main]]
+        identifier = "linkedin"
+        url = "https://www.linkedin.com/in/nikola-lukovic-89a17595"
+        weight = 5
+        pre = "<span data-feather='linkedin'></span>"
 
-[[menu.main]]
-identifier = "mastodon"
-pre = "<span data-feather='external-link'></span>"
-url = "https://hachyderm.io/@nikola"
-weight = 6
+    [[menu.main]]
+        identifier = "twitter"
+        pre = "<span data-feather='twitter'></span>"
+        url = "https://twitter.com/lichtnik"
+        weight = 7
 
-[[menu.main]]
-identifier = "twitter"
-pre = "<span data-feather='twitter'></span>"
-url = "https://twitter.com/lichtnik"
-weight = 7
-
-[[menu.main]]
-identifier = "bandcamp"
-pre = "<span data-feather='music'></span>"
-url = "https://bandcamp.com/nikolalukovic"
-weight = 8
+    [[menu.main]]
+        identifier = "bandcamp"
+        pre = "<span data-feather='music'></span>"
+        url = "https://bandcamp.com/nikolalukovic"
+        weight = 8

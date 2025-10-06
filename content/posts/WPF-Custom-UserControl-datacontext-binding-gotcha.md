@@ -2,7 +2,7 @@
 title: "WPF Custom UserControl Datacontext Binding Gotcha"
 date: 2017-03-15
 type: post
-tags: [wpf,datacontext,binding,.net,programming]
+tags: ["wpf","datacontext","binding",".net","programming"]
 image: "/images/wpf-xaml.png"
 ---
 Creating custom user controls in WPF and as well as fully supporting MVVM with binding is a pretty *straightforward* process, but there are a couple of things that, at a first glance, look like they should work but they're not. At least for me. One of those things is when you *bind* `DataContext` to code behind, or to `Self`.

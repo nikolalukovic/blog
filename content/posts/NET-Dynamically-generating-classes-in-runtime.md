@@ -2,7 +2,7 @@
 title: "NET Dynamically Generating Classes in Runtime"
 date: 2017-03-23
 type: post
-tags: [.net,dlr,dynamic,assembly,programming]
+tags: [".net","dlr","dynamic","assembly","programming"]
 image: "/images/dynamic-assembly.png"
 ---
 
