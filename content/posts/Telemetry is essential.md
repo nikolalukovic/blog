@@ -4,6 +4,7 @@ showTableOfContents: false
 tags: ["architecture","software development", "engineering", "programming"]
 title: "Telemetry is essential"
 type: "post"
+image: "/images/telemetry.png"
 ---
 This article won't be about other use cases of telemetry. I do not care about the politics or intentions of companies who utilize telemetry for user tracking. I am interested in telemetry as a tool, and like every tool, it could be used for its intended purpose or to bash someone's head in.
 
