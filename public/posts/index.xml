@@ -6,14 +6,14 @@
     <description>Recent content in Posts on A Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Telemetry is essential</title>
       <link>http://localhost:1313/posts/telemetry-is-essential/</link>
-      <pubDate>Mon, 06 Oct 2025 10:39:54 +0200</pubDate>
+      <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/telemetry-is-essential/</guid>
-      <description>&lt;h3 id=&#34;preface&#34;&gt;Preface&lt;/h3&gt;&#xA;&lt;p&gt;This is a strictly technical write-up. I do not care about the politics or intentions of some companies who utilize telemetry for user tracking. I am interested in telemetry as a tool, and like every tool it could be used for its intended purpose or to bash someone&amp;rsquo;s head in.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is a strictly technical write-up. I do not care about the politics or intentions of companies who utilize telemetry for user tracking. I am interested in telemetry as a tool, and like every tool, it could be used for its intended purpose or to bash someone&amp;rsquo;s head in.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve been in the outsourcing industry for more than 10 years and while that kind of work lacks in continued purpose, and sometimes, continued involvement it does have its perks. Variety being the biggest one in my opinion. Generalist approach towards software development is my preference and outsourcing industry gives me that opportunity. I&amp;rsquo;ve built both frontend(web and desktop) and backend and tools. In all kinds of languages and frameworks - from low level to high level.&lt;/p&gt;</description>
     </item>
     <item>
       <title>NET Dynamically Generating Classes in Runtime</title>
