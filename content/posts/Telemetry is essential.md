@@ -1,12 +1,11 @@
 ---
 date: 2025-10-10
-lastmod: 2025-10-10
 showTableOfContents: false
 tags: ["architecture","software development", "engineering", "programming"]
 title: "Telemetry is essential"
 type: "post"
 ---
-This is a strictly technical write-up. I do not care about the politics or intentions of companies who utilize telemetry for user tracking. I am interested in telemetry as a tool, and like every tool, it could be used for its intended purpose or to bash someone's head in.
+This article won't be about other use cases of telemetry. I do not care about the politics or intentions of companies who utilize telemetry for user tracking. I am interested in telemetry as a tool, and like every tool, it could be used for its intended purpose or to bash someone's head in.
 
 I've been in the outsourcing industry for more than 10 years and while that kind of work lacks in continued purpose, and sometimes, continued involvement it does have its perks. Variety being the biggest one in my opinion. Generalist approach towards software development is my preference and outsourcing industry gives me that opportunity. I've built both frontend(web and desktop) and backend and tools. In all kinds of languages and frameworks - from low level to high level.
 
